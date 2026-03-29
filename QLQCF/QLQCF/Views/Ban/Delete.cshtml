@@ -1,0 +1,15 @@
+﻿@model QLQCF.Models.Ban
+
+@{
+    ViewData["Title"] = "Xác nhận xoá bàn";
+}
+
+<h2>Xác nhận xoá bàn</h2>
+
+<p>Bạn có chắc chắn muốn xoá bàn <strong>@Model.Name</strong> không?</p>
+
+<form asp-action="DeleteConfirmed" method="post">
+    <input type="hidden" asp-for="Id" />
+    <button type="submit" class="btn btn-danger">Xoá</button>
+    <a asp-action="Index" class="btn btn-secondary">Huỷ</a>
+</form>

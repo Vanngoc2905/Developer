@@ -1,0 +1,64 @@
+﻿@model QLQCF.Models.RoleViewModel
+
+
+<h2>Quản lý quyền người dùng</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Email</th>
+            <th>Vai trò hiện tại</th>
+            <th>Thêm quyền</th>
+            <th>Xóa quyền</th>
+            <th>Xóa Tài Khoản</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var user in Model.Users)
+        {
+            <tr>
+                <td>@user.Email</td>
+                <td>
+                    @foreach (var role in Model.Roles)
+                    {
+                        if (await Model.UserManager.IsInRoleAsync(user, role.Name))
+                        {
+                            <span class="badge bg-primary">@role.Name</span>
+                        }
+                    }
+                </td>
+                <td>
+                    <form asp-action="AddRole" method="post">
+                        <input type="hidden" name="userId" value="@user.Id" />
+                        <select name="role">
+                            @foreach (var role in Model.Roles)
+                            {
+                                <option value="@role.Name">@role.Name</option>
+                            }
+                        </select>
+                        <button type="submit" class="btn btn-success">Thêm</button>
+                    </form>
+                </td>
+                <td>
+                    <form asp-action="RemoveRole" method="post">
+                        <input type="hidden" name="userId" value="@user.Id" />
+                        <select name="role">
+                            @foreach (var role in Model.Roles)
+                            {
+                                <option value="@role.Name">@role.Name</option>
+                            }
+                        </select>
+                        <button type="submit" class="btn btn-danger">Xóa</button>
+                    </form>
+                </td>
+                <td>
+                    <form asp-action="DeleteUser" method="post">
+                        <input type="hidden" name="userId" value="@user.Id" />
+                        <button type="submit" class="btn btn-danger">Xóa tài khoản</button>
+                    </form>
+
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

@@ -1,0 +1,108 @@
+﻿@model IEnumerable<QLQCF.Models.InvoiceHistory>
+
+@{
+    ViewData["Title"] = "Lịch sử đơn hàng";
+}
+
+<h2>Lịch sử đơn hàng</h2>
+
+<!-- Bộ lọc -->
+<form method="get" asp-action="Index" class="mb-3">
+    <label for="month">Tháng:</label>
+    <select id="month" name="month" class="form-control d-inline-block" style="width: auto; margin-right: 10px;">
+        <option value="">Tất cả</option>
+        @for (int i = 1; i <= 12; i++)
+        {
+            <option value="@i">@i</option>
+        }
+    </select>
+
+    <label for="year">Năm:</label>
+    <select id="year" name="year" class="form-control d-inline-block" style="width: auto; margin-right: 10px;">
+        <option value="">Tất cả</option>
+        @for (int i = DateTime.Now.Year; i >= 2020; i--)
+        {
+            <option value="@i">@i</option>
+        }
+    </select>
+
+    <button type="submit" class="btn btn-primary">Lọc</button>
+</form>
+
+<!-- Sort -->
+<div class="mb-3">
+    <a asp-action="Index" asp-route-sortOrder="@ViewBag.DateSortParam" class="btn btn-outline-info">
+        @if (ViewBag.DateSortParam == "date_asc")
+        {
+            <span><i class="fas fa-sort-amount-up-alt"></i> Mới nhất</span>
+        }
+        else
+        {
+            <span><i class="fas fa-sort-amount-down-alt"></i> Cũ nhất</span>
+        }
+    </a>
+</div>
+
+<!-- Bảng danh sách đơn hàng -->
+<form id="deleteForm" method="post" asp-action="DeleteMultiple">
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th><input type="checkbox" id="selectAll" /></th>
+                <th>ID</th>
+                <th>Khách hàng</th>
+                <th>Bàn</th>
+                <th>Ngày đặt</th>
+                <th>Sản phẩm</th>
+                <th>Tổng tiền</th>
+                <th>Hành động</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var history in Model)
+            {
+                var order = history.Order;
+                <tr>
+                    <td><input type="checkbox" name="selectedOrders" value="@order.Id" class="orderCheckbox" /></td>
+                    <td>@order.Id</td>
+                    <td>@order.CustomerName</td>
+                    <td>@(history.Ban != null ? $"[{history.Ban.Id}] {history.Ban.Name}" : "Mua online")</td>
+                    <td>@order.OrderDate.ToString("dd/MM/yyyy")</td>
+                    <td>
+                        <ul>
+                            @foreach (var detail in order.OrderDetails)
+                            {
+                                <li>@detail.Product?.Name x @detail.Quantity</li>
+                            }
+                        </ul>
+                    </td>
+                    <td>@order.TotalPrice.ToString("C0", new System.Globalization.CultureInfo("vi-VN"))</td>
+                    <td>
+                        <form asp-action="Delete" asp-route-id="@order.Id" method="post" onsubmit="return confirm('Bạn có chắc chắn muốn xóa đơn hàng này?');">
+                            <button type="submit" class="btn btn-danger btn-sm">
+                                <i class="fas fa-trash-alt"></i> Xóa
+                            </button>
+                        </form>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+    <button type="submit" class="btn btn-danger" onclick="return confirm('Bạn có chắc chắn muốn xóa các đơn hàng đã chọn?');">
+        <i class="fas fa-trash-alt"></i> Xóa các đơn đã chọn
+    </button>
+</form>
+
+<!-- Script chọn tất cả -->
+<script>
+    document.getElementById("selectAll").addEventListener("click", function () {
+        var checkboxes = document.querySelectorAll(".orderCheckbox");
+        for (var checkbox of checkboxes) {
+            checkbox.checked = this.checked;
+        }
+    });
+</script>
+
+<!-- Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">

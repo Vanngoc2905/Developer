@@ -1,0 +1,8 @@
+﻿@model int
+<h2>Hoàn Tất Thanh Toán</h2>
+<p>Your order with ID @Model has been placed successfully.</p>
+
+
+<a asp-action="OrderInvoice" asp-route-orderId="@Model" class="btn btn-success btn-lg btn-block">
+    🧾 Xem hóa đơn
+</a>

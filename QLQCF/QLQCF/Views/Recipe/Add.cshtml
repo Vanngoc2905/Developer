@@ -1,0 +1,44 @@
+﻿@model QLQCF.Models.Recipe
+
+@{
+    ViewData["Title"] = "Thêm công thức";
+}
+
+<h2>@ViewData["Title"]</h2>
+
+<!-- Hiển thị thông báo lỗi nếu có -->
+@if (ViewBag.ErrorMessage != null)
+{
+    <div class="alert alert-danger">@ViewBag.ErrorMessage</div>
+}
+@if (TempData["Success"] != null)
+{
+    <div class="alert alert-success">@TempData["Success"]</div>
+}
+
+<form asp-action="Add" method="post">
+    <div class="mb-3">
+        <label class="form-label">Sản phẩm</label>
+        <select asp-for="ProductId" asp-items="@(new SelectList(ViewBag.Products, "Id", "Name"))" class="form-control" required>
+            <option value="">-- Chọn sản phẩm --</option>
+        </select>
+        <span asp-validation-for="ProductId" class="text-danger"></span>
+    </div>
+
+    <div class="mb-3">
+        <label class="form-label">Nguyên liệu</label>
+        <select asp-for="IngredientId" asp-items="@(new SelectList(ViewBag.Ingredients, "IngredientId", "Name"))" class="form-control" required>
+            <option value="">-- Chọn nguyên liệu --</option>
+        </select>
+        <span asp-validation-for="IngredientId" class="text-danger"></span>
+    </div>
+
+    <div class="mb-3">
+        <label class="form-label">Số lượng cần</label>
+        <input asp-for="AmountNeeded" type="number" step="0.01" class="form-control" required />
+        <span asp-validation-for="AmountNeeded" class="text-danger"></span>
+    </div>
+
+    <button type="submit" class="btn btn-success">Thêm</button>
+    <a asp-action="Index" class="btn btn-secondary">Quay lại</a>
+</form>

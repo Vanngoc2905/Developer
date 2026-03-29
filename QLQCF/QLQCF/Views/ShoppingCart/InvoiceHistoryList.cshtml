@@ -1,0 +1,32 @@
+﻿@model IEnumerable<QLQCF.Models.InvoiceHistory>
+@{
+    ViewData["Title"] = "Lịch sử hóa đơn";
+}
+
+<h2 class="text-center mb-4">LỊCH SỬ HÓA ĐƠN</h2>
+
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>Mã hóa đơn</th>
+            <th>Ngày tạo</th>
+            <th>Bàn</th>
+            <th>Khách hàng</th>
+            <th>Chi tiết</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.Id</td>
+                <td>@item.CreatedAt.ToString("dd/MM/yyyy HH:mm")</td>
+                <td>@item.Ban?.Name</td>
+                <td>@(item.ApplicationUser?.FullName ?? "Khách lẻ")</td>
+                <td>
+                    <a asp-action="OrderInvoice" asp-route-orderId="@item.OrderId" class="btn btn-sm btn-info">Xem</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

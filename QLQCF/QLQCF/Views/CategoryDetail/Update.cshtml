@@ -1,0 +1,16 @@
+﻿<!-- Views/CategoryDetail/Update.cshtml -->
+@model QLQCF.Models.CategoryDetail
+
+<h2>Cập Nhật Chi Tiết Danh Mục</h2>
+<form asp-action="Update" method="post">
+    <input type="hidden" asp-for="Id" />
+    <div class="mb-3">
+        <label class="form-label">Tên Chi Tiết</label>
+        <input asp-for="DetailName" class="form-control" required />
+    </div>
+    <div class="mb-3">
+        <label class="form-label">Danh Mục</label>
+        <select asp-for="CategoryId" asp-items="@(new SelectList(ViewBag.Categories, "Id", "Name"))" class="form-control"></select>
+    </div>
+    <button type="submit" class="btn btn-primary">Lưu Thay Đổi</button>
+</form>

@@ -1,0 +1,24 @@
+﻿@model QLQCF.Models.Ingredient
+
+@{
+    ViewData["Title"] = "Chi tiết nguyên vật liệu";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<table class="table">
+    <tr>
+        <th>Tên nguyên vật liệu</th>
+        <td>@Model.Name</td>
+    </tr>
+    <tr>
+        <th>Đơn vị</th>
+        <td>@Model.Unit</td>
+    </tr>
+    <tr>
+        <th>Số lượng hiện có</th>
+        <td>@Model.CurrentQuantity</td>
+    </tr>
+</table>
+
+<a href="@Url.Action("Index", "Inventory")">Quay lại danh sách</a>

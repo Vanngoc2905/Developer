@@ -1,0 +1,26 @@
+﻿@model QLQCF.Models.Recipe
+@{
+    ViewData["Title"] = "Xóa công thức";
+}
+
+<h2 class="mb-4 text-danger">@ViewData["Title"]</h2>
+
+<h5>Bạn có chắc chắn muốn xóa công thức này?</h5>
+
+<dl class="row">
+    <dt class="col-sm-3">Sản phẩm</dt>
+    <dd class="col-sm-9">@Model.Product?.Name</dd>
+
+    <dt class="col-sm-3">Nguyên liệu</dt>
+    <dd class="col-sm-9">@Model.Ingredient?.Name</dd>
+
+    <dt class="col-sm-3">Số lượng</dt>
+    <dd class="col-sm-9">@Model.AmountNeeded</dd>
+</dl>
+
+<form asp-action="DeleteConfirmed" method="post">
+    @Html.AntiForgeryToken()
+    <input type="hidden" name="id" value="@Model.RecipeId" />
+    <button type="submit" class="btn btn-danger">Xoá</button>
+    <a asp-action="Index" class="btn btn-secondary">Quay lại</a>
+</form>

@@ -1,0 +1,17 @@
+﻿@model QLQCF.Models.Ban
+
+@{
+    ViewData["Title"] = "Chi tiết bàn";
+}
+
+<h2>@ViewData["Title"]</h2>
+
+<div class="card">
+    <div class="card-body">
+        <p><strong>Tên bàn:</strong> @Model.Name</p>
+        <p><strong>Số chỗ:</strong> @Model.Socho</p>
+        <p><strong>Ghi chú:</strong> @Model.Description</p>
+    </div>
+</div>
+
+<a asp-action="Index" class="btn btn-secondary mt-3">Quay lại danh sách</a>

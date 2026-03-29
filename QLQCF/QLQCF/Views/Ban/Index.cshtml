@@ -1,0 +1,69 @@
+﻿@model IEnumerable<QLQCF.Models.Ban>
+
+@{
+    ViewData["Title"] = "Danh sách bàn";
+}
+
+<h2 class="mb-4">@ViewData["Title"]</h2>
+
+<a asp-action="Add" class="btn btn-primary mb-4">+ Thêm bàn mới</a>
+
+<div class="row">
+    @foreach (var ban in Model)
+    {
+        <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+            <div class="card ban-card shadow-sm border-primary h-100 text-center">
+                <img src="~/images/images.png" class="card-img-top ban-image mx-auto" alt="Hình bàn">
+                <div class="card-body">
+                    <h5 class="card-title">Bàn: @ban.Name</h5>
+                    <p class="card-text">Số chỗ: @ban.Socho</p>
+                    <p class="card-text text-muted">@ban.Description</p>
+
+                    <a asp-action="ChonMon" asp-route-id="@ban.Id" class="btn btn-success mb-2 w-100">Chọn món</a>
+
+                    <div class="btn-group w-100">
+                        <a asp-action="Details" asp-route-id="@ban.Id" class="btn btn-info">Xem</a>
+                        <a asp-action="Edit" asp-route-id="@ban.Id" class="btn btn-warning">Sửa</a>
+                        <a asp-action="Delete" asp-route-id="@ban.Id" class="btn btn-danger">Xoá</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    }
+</div>
+
+<style>
+    .ban-card {
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+        border-radius: 15px;
+        overflow: hidden;
+    }
+
+        .ban-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+        }
+
+    .ban-image {
+        width: 100%;
+        height: 180px;
+        object-fit: cover;
+        border-top-left-radius: 15px;
+        border-top-right-radius: 15px;
+    }
+
+    .card-title {
+        font-weight: bold;
+        font-size: 1.2rem;
+        color: #2c3e50;
+        margin-top: 10px;
+    }
+
+    .card-text {
+        font-size: 0.95rem;
+    }
+
+    .btn-group .btn {
+        font-size: 0.85rem;
+    }
+</style>

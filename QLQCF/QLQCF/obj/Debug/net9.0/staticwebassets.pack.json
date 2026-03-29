@@ -1,0 +1,369 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\ADMIN\\Downloads\\QLQCF\\QLQCF\\obj\\Debug\\net9.0\\scopedcss\\projectbundle\\QLQCF.bundle.scp.css",
+      "PackagePath": "staticwebassets\\QLQCF.1gbdfegh8b.bundle.scp.css"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Downloads\\QLQCF\\QLQCF\\wwwroot\\css\\style.css",
+      "PackagePath": "staticwebassets\\css\\style.css"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Downloads\\QLQCF\\QLQCF\\wwwroot\\favicon.ico",
+      "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Downloads\\QLQCF\\QLQCF\\wwwroot\\images\\0272762b-34c3-4153-a793-55cbf1b09844.jpg",
+      "PackagePath": "staticwebassets\\images\\0272762b-34c3-4153-a793-55cbf1b09844.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Downloads\\QLQCF\\QLQCF\\wwwroot\\images\\06b604a3-f876-4802-ba77-85c6b6ff682d.jpg",
+      "PackagePath": "staticwebassets\\images\\06b604a3-f876-4802-ba77-85c6b6ff682d.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Downloads\\QLQCF\\QLQCF\\wwwroot\\images\\08d75eda-b6d9-4995-bf82-dfe592a4f823.jpg",
+      "PackagePath": "staticwebassets\\images\\08d75eda-b6d9-4995-bf82-dfe592a4f823.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Downloads\\QLQCF\\QLQCF\\wwwroot\\images\\2e5aee4e-f231-4f20-bb97-06051c2db289.jpg",
+      "PackagePath": "staticwebassets\\images\\2e5aee4e-f231-4f20-bb97-06051c2db289.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Downloads\\QLQCF\\QLQCF\\wwwroot\\images\\33689686-6a7f-4230-9c2e-112aa79f8781.jpg",
+      "PackagePath": "staticwebassets\\images\\33689686-6a7f-4230-9c2e-112aa79f8781.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Downloads\\QLQCF\\QLQCF\\wwwroot\\images\\38711b20-cb7b-47c1-8cbb-cbb6f8a88c66.jpg",
+      "PackagePath": "staticwebassets\\images\\38711b20-cb7b-47c1-8cbb-cbb6f8a88c66.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Downloads\\QLQCF\\QLQCF\\wwwroot\\images\\448a5d1c-6a1e-4dcb-9b11-663aee0c104a.jpg",
+      "PackagePath": "staticwebassets\\images\\448a5d1c-6a1e-4dcb-9b11-663aee0c104a.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Downloads\\QLQCF\\QLQCF\\wwwroot\\images\\51a7943a-5477-4d6b-88fa-6b5e7f6d7831.jpg",
+      "PackagePath": "staticwebassets\\images\\51a7943a-5477-4d6b-88fa-6b5e7f6d7831.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Downloads\\QLQCF\\QLQCF\\wwwroot\\images\\665e4ac1-0d24-475e-99c3-0ff448fd4e8c.webp",
+      "PackagePath": "staticwebassets\\images\\665e4ac1-0d24-475e-99c3-0ff448fd4e8c.webp"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Downloads\\QLQCF\\QLQCF\\wwwroot\\images\\67a596da-a15d-460a-ad18-634c91cf2f89.webp",
+      "PackagePath": "staticwebassets\\images\\67a596da-a15d-460a-ad18-634c91cf2f89.webp"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Downloads\\QLQCF\\QLQCF\\wwwroot\\images\\6b0612c0-c56c-42e7-9e1d-e1f5ee893529.jpg",
+      "PackagePath": "staticwebassets\\images\\6b0612c0-c56c-42e7-9e1d-e1f5ee893529.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Downloads\\QLQCF\\QLQCF\\wwwroot\\images\\7aa2a13d-4f81-4d9c-a64c-00695251b6d3.jpg",
+      "PackagePath": "staticwebassets\\images\\7aa2a13d-4f81-4d9c-a64c-00695251b6d3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Downloads\\QLQCF\\QLQCF\\wwwroot\\images\\825fe74f-f5b9-4772-a706-53b764915b42.jpg",
+      "PackagePath": "staticwebassets\\images\\825fe74f-f5b9-4772-a706-53b764915b42.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Downloads\\QLQCF\\QLQCF\\wwwroot\\images\\871c0953-0557-4627-b462-f3abf9bad9b4.jpg",
+      "PackagePath": "staticwebassets\\images\\871c0953-0557-4627-b462-f3abf9bad9b4.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Downloads\\QLQCF\\QLQCF\\wwwroot\\images\\a05ca8c6-a50c-433d-a753-6929b0f405ed.jpg",
+      "PackagePath": "staticwebassets\\images\\a05ca8c6-a50c-433d-a753-6929b0f405ed.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Downloads\\QLQCF\\QLQCF\\wwwroot\\images\\e151c606-db30-48f6-ad0c-7a1514171e29.jpg",
+      "PackagePath": "staticwebassets\\images\\e151c606-db30-48f6-ad0c-7a1514171e29.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Downloads\\QLQCF\\QLQCF\\wwwroot\\images\\e4b36b6c-7729-4288-b5c9-e35d8f0e7ef4.jpg",
+      "PackagePath": "staticwebassets\\images\\e4b36b6c-7729-4288-b5c9-e35d8f0e7ef4.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Downloads\\QLQCF\\QLQCF\\wwwroot\\images\\images (1).jpg",
+      "PackagePath": "staticwebassets\\images\\images (1).jpg"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Downloads\\QLQCF\\QLQCF\\wwwroot\\images\\images (2).jpg",
+      "PackagePath": "staticwebassets\\images\\images (2).jpg"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Downloads\\QLQCF\\QLQCF\\wwwroot\\images\\images (3).jpg",
+      "PackagePath": "staticwebassets\\images\\images (3).jpg"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Downloads\\QLQCF\\QLQCF\\wwwroot\\images\\images (5).jpg",
+      "PackagePath": "staticwebassets\\images\\images (5).jpg"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Downloads\\QLQCF\\QLQCF\\wwwroot\\images\\images.jpg",
+      "PackagePath": "staticwebassets\\images\\images.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Downloads\\QLQCF\\QLQCF\\wwwroot\\images\\images.png",
+      "PackagePath": "staticwebassets\\images\\images.png"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Downloads\\QLQCF\\QLQCF\\wwwroot\\images\\tải xuống (1).jpg",
+      "PackagePath": "staticwebassets\\images\\tải xuống (1).jpg"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Downloads\\QLQCF\\QLQCF\\wwwroot\\images\\tải xuống.jpg",
+      "PackagePath": "staticwebassets\\images\\tải xuống.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Downloads\\QLQCF\\QLQCF\\wwwroot\\js\\script.js",
+      "PackagePath": "staticwebassets\\js\\script.js"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Downloads\\QLQCF\\QLQCF\\wwwroot\\lib\\bootstrap\\LICENSE",
+      "PackagePath": "staticwebassets\\lib\\bootstrap"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Downloads\\QLQCF\\QLQCF\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Downloads\\QLQCF\\QLQCF\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Downloads\\QLQCF\\QLQCF\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Downloads\\QLQCF\\QLQCF\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Downloads\\QLQCF\\QLQCF\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Downloads\\QLQCF\\QLQCF\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Downloads\\QLQCF\\QLQCF\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Downloads\\QLQCF\\QLQCF\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Downloads\\QLQCF\\QLQCF\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Downloads\\QLQCF\\QLQCF\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Downloads\\QLQCF\\QLQCF\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Downloads\\QLQCF\\QLQCF\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Downloads\\QLQCF\\QLQCF\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Downloads\\QLQCF\\QLQCF\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Downloads\\QLQCF\\QLQCF\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Downloads\\QLQCF\\QLQCF\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Downloads\\QLQCF\\QLQCF\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Downloads\\QLQCF\\QLQCF\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Downloads\\QLQCF\\QLQCF\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Downloads\\QLQCF\\QLQCF\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Downloads\\QLQCF\\QLQCF\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Downloads\\QLQCF\\QLQCF\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Downloads\\QLQCF\\QLQCF\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Downloads\\QLQCF\\QLQCF\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Downloads\\QLQCF\\QLQCF\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Downloads\\QLQCF\\QLQCF\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css.map"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Downloads\\QLQCF\\QLQCF\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Downloads\\QLQCF\\QLQCF\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Downloads\\QLQCF\\QLQCF\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Downloads\\QLQCF\\QLQCF\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Downloads\\QLQCF\\QLQCF\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Downloads\\QLQCF\\QLQCF\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Downloads\\QLQCF\\QLQCF\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Downloads\\QLQCF\\QLQCF\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Downloads\\QLQCF\\QLQCF\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Downloads\\QLQCF\\QLQCF\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Downloads\\QLQCF\\QLQCF\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Downloads\\QLQCF\\QLQCF\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Downloads\\QLQCF\\QLQCF\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Downloads\\QLQCF\\QLQCF\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Downloads\\QLQCF\\QLQCF\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Downloads\\QLQCF\\QLQCF\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js.map"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Downloads\\QLQCF\\QLQCF\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Downloads\\QLQCF\\QLQCF\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Downloads\\QLQCF\\QLQCF\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Downloads\\QLQCF\\QLQCF\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Downloads\\QLQCF\\QLQCF\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Downloads\\QLQCF\\QLQCF\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\LICENSE.md"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Downloads\\QLQCF\\QLQCF\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.js"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Downloads\\QLQCF\\QLQCF\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.min.js"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Downloads\\QLQCF\\QLQCF\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.js"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Downloads\\QLQCF\\QLQCF\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.min.js"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Downloads\\QLQCF\\QLQCF\\wwwroot\\lib\\jquery\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery\\LICENSE.txt"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Downloads\\QLQCF\\QLQCF\\wwwroot\\lib\\jquery\\dist\\jquery.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.js"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Downloads\\QLQCF\\QLQCF\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.js"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Downloads\\QLQCF\\QLQCF\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
+    },
+    {
+      "Id": "obj\\Debug\\net9.0\\staticwebassets\\msbuild.QLQCF.Microsoft.AspNetCore.StaticWebAssetEndpoints.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssetEndpoints.props"
+    },
+    {
+      "Id": "obj\\Debug\\net9.0\\staticwebassets\\msbuild.QLQCF.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net9.0\\staticwebassets\\msbuild.build.QLQCF.props",
+      "PackagePath": "build\\QLQCF.props"
+    },
+    {
+      "Id": "obj\\Debug\\net9.0\\staticwebassets\\msbuild.buildMultiTargeting.QLQCF.props",
+      "PackagePath": "buildMultiTargeting\\QLQCF.props"
+    },
+    {
+      "Id": "obj\\Debug\\net9.0\\staticwebassets\\msbuild.buildTransitive.QLQCF.props",
+      "PackagePath": "buildTransitive\\QLQCF.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

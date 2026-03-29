@@ -1,0 +1,63 @@
+﻿@model QLQCF.Models.Product
+@using Microsoft.AspNetCore.Mvc.Rendering
+@{
+ViewData["Title"] = "Edit Product";
+}
+<h2>Edit Product</h2>
+<form asp-action="Update" method="post" enctype="multipart/form-data">
+<input type="hidden" asp-for="Id" />
+	<div class="form-group">
+		<label asp-for="Name"></label>
+		<input asp-for="Name" class="form-control" />
+		<span asp-validation-for="Name" class="text-danger"></span>
+	</div>
+	<div class="form-group">
+		<label asp-for="Price"></label>
+		<input asp-for="Price" class="form-control" />
+		<span asp-validation-for="Price" class="text-danger"></span>
+	</div>
+	<div class="form-group">
+		<label asp-for="Description"></label>
+        <textarea asp-for="Description" class="form-control"></textarea>
+		<span asp-validation-for="Description" class="text-danger"></span>
+
+	</div>
+	<div class="form-group">
+		<label asp-for="CategoryDetailId">Danh Mục</label>
+		<select asp-for="CategoryDetailId" asp-items="ViewBag.CategoryDetails" class="form-control" required>
+			<option value="">-- Chọn danh mục --</option>
+		</select>
+		<span asp-validation-for="CategoryDetailId" class="text-danger"></span>
+	</div>
+
+	<div class="form-group">
+		<label asp-for="ImageUrl">Product Image</label>
+		<input type="file" asp-for="ImageUrl" class="form-control"
+			   id="imageInput" />
+		<div class="form-group">
+			<input type="submit" value="Save" class="btn btn-primary" />
+		</div>
+	<button type="submit" class="btn btn-primary">Update</button>
+</form>
+</div>
+<div class="col-8">
+
+	<img src="@Model.ImageUrl" alt="Product Image" style="max-width:200px;" id="previewImage" />
+
+</div>
+</div>
+<script>
+	document.querySelectorAll('input[type="file"]').forEach(input => {
+	input.addEventListener('change', function (event) {
+	const file = event.target.files[0];
+	if (file) {
+	const reader = new FileReader();
+	reader.onload = function (e) {
+	const img = document.getElementById("previewImage")
+	img.src = e.target.result
+	};
+	reader.readAsDataURL(file);
+	}
+	});
+	});
+</script>

@@ -1,0 +1,81 @@
+﻿@using QLQCF.Extensions
+@model QLQCF.Models.Order
+@{
+    ViewData["Title"] = "Thanh toán đơn hàng";
+    var cart = Context.Session.GetObjectFromJson<ShoppingCart>("Cart");
+    var banId = Context.Session.GetInt32("BanId");
+    var tenBan = Context.Session.GetString("TenBan");
+}
+
+<h2>Thanh toán đơn hàng</h2>
+
+@if (TempData["Error"] != null)
+{
+    <div class="alert alert-danger">@TempData["Error"]</div>
+}
+
+@if (cart != null && cart.Items.Any())
+{
+    @* Hiển thị thông tin bàn nếu có *@
+    @if (banId != null)
+    {
+        <div class="mb-3">
+            <strong>Bàn:</strong> @banId 
+        </div>
+    }
+
+    <form asp-action="Checkout" method="post">
+        <div class="form-group">
+            <label asp-for="CustomerName">Tên Khách Hàng</label>
+            <input asp-for="CustomerName" class="form-control" />
+            <span asp-validation-for="CustomerName" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="ShippingAddress">Địa Chỉ Khách Hàng</label>
+            <textarea asp-for="ShippingAddress" class="form-control"></textarea>
+            <span asp-validation-for="ShippingAddress" class="text-danger"></span>
+        </div>
+
+        <h4>Giỏ hàng của bạn</h4>
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>Sản phẩm</th>
+                    <th>Giá</th>
+                    <th>Số lượng</th>
+                    <th>Thành tiền</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in cart.Items)
+                {
+                    <tr>
+                        <td>@item.Name</td>
+                        <td>@item.Price.ToString("n0") đ</td>
+                        <td>@item.Quantity</td>
+                        <td>@(item.Price * item.Quantity).ToString("n0") đ</td>
+                    </tr>
+                }
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td colspan="3" class="text-right"><strong>Tổng cộng:</strong></td>
+                    <td>
+                        @cart.Items.Sum(i => i.Price * i.Quantity).ToString("n0", new System.Globalization.CultureInfo("vi-VN")) đ
+                    </td>
+                </tr>
+            </tfoot>
+        </table>
+
+        <button type="submit" class="btn btn-primary">Xác nhận thanh toán</button>
+        <a asp-action="Index" class="btn btn-secondary">Quay lại cửa hàng</a>
+    </form>
+}
+else
+{
+    <div class="alert alert-warning">
+        Giỏ hàng của bạn đang trống. Vui lòng chọn sản phẩm trước khi thanh toán.
+    </div>
+    <a asp-controller="Product" asp-action="Index" class="btn btn-secondary">Xem sản phẩm</a>
+}

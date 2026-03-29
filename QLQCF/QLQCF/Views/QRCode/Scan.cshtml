@@ -1,0 +1,26 @@
+﻿@{
+    ViewData["Title"] = "Quét mã QR";
+}
+
+<h2>@ViewData["Title"]</h2>
+
+<a asp-controller="QRCode" asp-action="Generate" class="btn btn-primary">
+    Tạo mã QR
+</a>
+
+<form method="post" enctype="multipart/form-data" asp-controller="QRCode" asp-action="Scan">
+    <div>
+        <label for="qrImage">Chọn ảnh QR Code:</label>
+        <input type="file" name="qrImage" accept="image/*" required />
+    </div>
+    <div style="margin-top: 10px;">
+        <button type="submit" class="btn btn-primary">Quét mã</button>
+    </div>
+</form>
+
+@if (TempData["Result"] != null)
+{
+    <div class="alert alert-success mt-3">
+        Kết quả quét: <strong>@TempData["Result"]</strong>
+    </div>
+}

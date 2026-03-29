@@ -1,0 +1,87 @@
+﻿@model IEnumerable<QLQCF.Models.Product>
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<div class="container mt-4">
+    <h2 class="text-center mb-4">✨ Danh Sách Sản Phẩm ✨</h2>
+
+    @* Thông báo *@
+    @if (TempData["Success"] != null)
+    {
+        <div class="alert alert-success text-center">@TempData["Success"]</div>
+    }
+    @if (TempData["Error"] != null)
+    {
+        <div class="alert alert-danger text-center">@TempData["Error"]</div>
+    }
+    <p>
+        <a asp-action="Add" class="btn btn-primary"><i class="fas fa-plus-circle"></i> Thêm sản phẩm</a>
+    </p>
+    <p>
+        <a asp-controller="Categories" asp-action="Index" class="btn btn-primary"><i class="fas fa-list"></i> Danh Sách Sản Phẩm</a>
+    </p>
+    <p>
+        <a asp-controller="CategoryDetail" asp-action="Index" class="btn btn-primary"><i class="fas fa-list"></i> Chi Tiết Sản Phẩm</a>
+    </p>
+
+    <table class="table table-bordered table-hover text-center">
+        <thead class="table-info">
+            <tr>
+                <th>Tên</th>
+                <th>Giá</th>
+                <th>Mô Tả</th>
+                <th>Loại</th>
+                <th>Hình</th>
+                <th>Chức Năng</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var product in Model)
+            {
+                <tr>
+                    <td>@product.Name</td>
+                    <td>@product.Price.ToString("N0") VNĐ</td>
+                    <td>@product.Description</td>
+
+                    <td>
+                        @(product.CategoryDetail != null ? product.CategoryDetail.DetailName : "Không có danh mục")
+                    </td>
+
+                    <td>
+                        @if (!string.IsNullOrEmpty(product.ImageUrl))
+                        {
+                            <img src="@product.ImageUrl" alt="Product Image"
+                                 style="max-width:100px; border-radius:8px; object-fit: cover;" />
+                        }
+                        else
+                        {
+                            <span class="text-muted">Không có ảnh</span>
+                        }
+                    </td>
+
+                    <td>
+                        <a asp-action="Display" asp-route-id="@product.Id" class="btn btn-info btn-sm">
+                            <i class="fas fa-eye"></i> Chi tiết
+                        </a>
+
+                        <a asp-action="Update" asp-route-id="@product.Id" class="btn btn-warning btn-sm">
+                            <i class="fas fa-edit"></i> Sửa
+                        </a>
+
+                        <form asp-action="DeleteConfirmed" asp-route-id="@product.Id" method="post" class="d-inline"
+                              onsubmit="return confirm('Bạn có chắc chắn muốn xóa sản phẩm này không?');">
+                            <button type="submit" class="btn btn-danger btn-sm">
+                                <i class="fas fa-trash-alt"></i> Xóa
+                            </button>
+                        </form>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+
+@* Thêm link Font Awesome *@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">

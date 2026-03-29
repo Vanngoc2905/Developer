@@ -1,0 +1,60 @@
+﻿@model IEnumerable<QLQCF.Models.Ingredient>
+
+@{
+    ViewData["Title"] = "Danh sách Nguyên Liệu";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+@if (TempData["Error"] != null)
+{
+    <div class="alert alert-danger">
+        @TempData["Error"]
+    </div>
+}
+
+@if (TempData["Success"] != null)
+{
+    <div class="alert alert-success">
+        @TempData["Success"]
+    </div>
+}
+
+<a href="@Url.Action("Add")" class="btn btn-primary">Thêm Nguyên Liệu</a>
+<a asp-area="" asp-controller="Recipe" asp-action="Index" class="btn btn-primary">
+   Công Thức Món
+</a>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Tên</th>
+            <th>Đơn vị</th>
+            <th>Số lượng hiện tại</th>
+            <th>Thao tác</th>
+        </tr>
+    </thead>
+    <tbody>
+        @if (Model != null)
+        {
+            foreach (var ingredient in Model)
+            {
+                <tr>
+                    <td>@ingredient.IngredientId</td>
+                    <td>@ingredient.Name</td>
+                    <td>@ingredient.Unit</td>
+                    <td>@ingredient.CurrentQuantity</td> <!-- Đúng -->
+                    <td>
+                        <a href="@Url.Action("Update", new { id = ingredient.IngredientId })" class="btn btn-warning">Cập nhật</a>
+                        <a href="@Url.Action("Delete", new { id = ingredient.IngredientId })" class="btn btn-danger">Xóa</a>
+                    </td>
+                </tr>
+            }
+        }
+        else
+        {
+            <tr><td colspan="5">Không có dữ liệu.</td></tr>
+        }
+    </tbody>
+</table>

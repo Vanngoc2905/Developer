@@ -1,0 +1,19 @@
+﻿@model QLQCF.Models.Ingredient
+
+@{
+    ViewData["Title"] = "Xoá nguyên liệu";
+}
+
+<h2>Bạn có chắc muốn xoá nguyên liệu này?</h2>
+
+<div>
+    <h4>@Model.Name</h4>
+    <p>Đơn vị: @Model.Unit</p>
+    <p>Số lượng: @Model.CurrentQuantity</p>
+</div>
+
+<form asp-action="DeleteConfirmed" method="post">
+    <input type="hidden" name="id" value="@Model.IngredientId" />
+    <button type="submit" class="btn btn-danger">Xoá</button>
+    <a asp-action="Index" class="btn btn-secondary">Huỷ</a>
+</form>

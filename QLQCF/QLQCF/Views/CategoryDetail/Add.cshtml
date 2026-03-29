@@ -1,0 +1,15 @@
+﻿<!-- Views/CategoryDetail/Add.cshtml -->
+@model QLQCF.Models.CategoryDetail
+
+<h2>Thêm Chi Tiết Danh Mục</h2>
+<form asp-action="Add" method="post">
+    <div class="mb-3">
+        <label class="form-label">Tên Chi Tiết</label>
+        <input asp-for="DetailName" class="form-control" required />
+    </div>
+    <div class="mb-3">
+        <label class="form-label">Danh Mục</label>
+        <select asp-for="CategoryId" asp-items="@(new SelectList(ViewBag.Categories, "Id", "Name"))" class="form-control"></select>
+    </div>
+    <button type="submit" class="btn btn-success">Thêm</button>
+</form>

@@ -1,0 +1,53 @@
+﻿@model IEnumerable<QLQCF.Models.Recipe>
+@{
+    ViewData["Title"] = "Danh sách công thức";
+}
+
+<h2>@ViewData["Title"]</h2>
+
+<a asp-action="Add" class="btn btn-primary mb-3">Thêm công thức</a>
+
+@if (TempData["Success"] != null)
+{
+    <div class="alert alert-success">@TempData["Success"]</div>
+}
+@if (TempData["Error"] != null)
+{
+    <div class="alert alert-danger">@TempData["Error"]</div>
+}
+
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>#</th>
+            <th>Sản phẩm</th>
+            <th>Nguyên liệu</th>
+            <th>Số lượng cần</th>
+            <th>Hành động</th>
+        </tr>
+    </thead>
+    <tbody>
+        @if (Model.Any())
+        {
+            int i = 1;
+            foreach (var item in Model)
+            {
+                <tr>
+                    <td>@i</td>
+                    <td>@item.Product?.Name</td>
+                    <td>@item.Ingredient?.Name</td>
+                    <td>@item.AmountNeeded</td>
+                    <td>
+                        <a asp-action="Update" asp-route-id="@item.RecipeId" class="btn btn-sm btn-warning">Sửa</a>
+                        <a asp-action="Delete" asp-route-id="@item.RecipeId" class="btn btn-sm btn-danger" onclick="return confirm('Xác nhận xóa?');">Xóa</a>
+                    </td>
+                </tr>
+                i++;
+            }
+        }
+        else
+        {
+            <tr><td colspan="5" class="text-center">Chưa có công thức nào.</td></tr>
+        }
+    </tbody>
+</table>

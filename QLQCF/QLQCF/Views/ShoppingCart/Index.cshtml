@@ -1,0 +1,51 @@
+﻿@model ShoppingCart
+<div class="cart-container">
+    <div class="cart-header">Giỏ Hàng Của Bạn</div>
+    @if (Model != null && Model.Items.Any())
+    {
+        <table class="cart-table">
+            <thead>
+                <tr>
+                    <th></th>
+                    <th>Sản Phẩm</th>
+                    <th>Số Lượng</th>
+                    <th>Đơn Giá</th>
+                    <th>Tổng Cộng</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model.Items)
+                {
+                    <tr class="cart-item-row" data-product-id="@item.ProductId">
+                        <td>
+                            <img src="@item.ImageUrl" alt="@item.Name" class="cart-item-image" />
+                        </td>
+                        <td><span class="cart-item-name">@item.Name</span></td>
+                        <td>
+
+                            <div class="quantity-adjust">
+                                <button class="btn btn-sm btn-outline-secondary decrease">-</button>
+                                <input type="text" class="quantity-display" value="@item.Quantity" readonly />
+                                <button class="btn btn-sm btn-outline-secondary increase">+</button>
+                            </div>
+                        </td>
+                        <td><span class="cart-item-price" style="color: red;">@item.Price.ToString("N0") VNĐ</span></td>
+                        <td><span class="cart-item-total">@(item.Price * item.Quantity) VNĐ</span></td>
+                        <td>
+                            <a asp-action="RemoveFromCart" asp-route-productId="@item.ProductId" class="btn btn-danger">Xóa</a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    }
+    else
+    {
+        <p class="empty-cart-message">Giỏ hàng của bạn đang trống.</p>
+    }
+    <p>Tổng tiền: <span id="total-price">@ViewBag.TotalPrice.ToString("N0")</span> VNĐ</p>
+
+    <a asp-action="Checkout" class="btn btn-home m-2">Mua Ngay</a>
+</div>
+<script src="~/js/script.js"></script>

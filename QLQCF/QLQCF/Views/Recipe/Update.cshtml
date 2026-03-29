@@ -1,0 +1,38 @@
+﻿@model QLQCF.Models.Recipe
+
+@{
+    ViewData["Title"] = "Cập nhật công thức";
+    var products = ViewBag.Products as IEnumerable<QLQCF.Models.Product>;
+    var ingredients = ViewBag.Ingredients as IEnumerable<QLQCF.Models.Ingredient>;
+}
+
+<h2>@ViewData["Title"]</h2>
+
+<form asp-action="Update" method="post">
+    <input type="hidden" asp-for="RecipeId" />
+
+    <div class="form-group">
+        <label for="ProductId">Sản phẩm</label>
+        <select asp-for="ProductId" class="form-control" asp-items="@(new SelectList(products, "Id", "Name"))" required>
+            <option value="">-- Chọn sản phẩm --</option>
+        </select>
+        <span asp-validation-for="ProductId" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label for="IngredientId">Nguyên liệu</label>
+        <select asp-for="IngredientId" class="form-control" asp-items="@(new SelectList(ingredients, "IngredientId", "Name"))" required>
+            <option value="">-- Chọn nguyên liệu --</option>
+        </select>
+        <span asp-validation-for="IngredientId" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label for="AmountNeeded">Số lượng cần</label>
+        <input asp-for="AmountNeeded" class="form-control" step="0.5" />
+        <span asp-validation-for="AmountNeeded" class="text-danger"></span>
+    </div>
+
+    <button type="submit" class="btn btn-success">Cập nhật</button>
+    <a asp-action="Index" class="btn btn-secondary">Quay lại</a>
+</form>

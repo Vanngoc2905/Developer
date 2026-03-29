@@ -1,0 +1,13 @@
+﻿@{
+    ViewData["Title"] = "Tạo mã QR";
+}
+
+<h2>Tạo mã QR</h2>
+
+<form asp-action="Generate" method="post">
+    <div>
+        <label>Nội dung cần mã hoá:</label>
+        <input type="text" name="qrText" required />
+    </div>
+    <button type="submit">Tạo mã QR</button>
+</form>

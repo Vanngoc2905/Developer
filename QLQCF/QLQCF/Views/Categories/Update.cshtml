@@ -1,0 +1,15 @@
+﻿@* Views/Categories/Update.cshtml *@
+@model QLQCF.Models.Category
+
+<h2>Cập Nhật Danh Mục</h2>
+<form asp-action="Update" method="post">
+    <input type="hidden" asp-for="Id" />
+    <div class="form-group">
+        <label for="Name">Tên Danh Mục</label>
+        <input asp-for="Name" class="form-control" />
+        <span asp-validation-for="Name" class="text-danger"></span>
+    </div>
+
+    <button type="submit" class="btn btn-warning mt-3">Cập Nhật</button>
+    <a asp-action="Index" class="btn btn-secondary mt-3">Hủy</a>
+</form>

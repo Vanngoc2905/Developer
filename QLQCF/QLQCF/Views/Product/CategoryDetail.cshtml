@@ -1,0 +1,79 @@
+﻿@{
+    Layout = "_Layout";
+}
+
+@model IEnumerable<QLQCF.Models.Product>
+
+<div class="container mt-4">
+    <h2 class="text-center mb-4">🛍️ @ViewBag.CategoryName 🛍️</h2>
+
+    <!-- Hiển thị các loại sản phẩm trong danh mục -->
+    <div class="mb-3">
+        <strong>Chọn loại:</strong>
+        <a href="@Url.Action("CategoryDetail", new { category = ViewBag.CategoryName })" class="btn @(string.IsNullOrEmpty(Context.Request.Query["detail"]) ? "btn-primary" : "btn-outline-primary") btn-sm">Tất cả</a>
+        @foreach (var detail in ViewBag.DetailNames)
+        {
+            <a href="@Url.Action("CategoryDetail", new { category = ViewBag.CategoryName, detail = detail })"
+               class="btn @(Context.Request.Query["detail"] == detail ? "btn-primary" : "btn-outline-primary") btn-sm">
+                @detail
+            </a>
+        }
+    </div>
+
+    @if (Model != null && Model.Any())
+    {
+        <div class="row row-cols-2 row-cols-md-4 g-3">
+            @foreach (var product in Model)
+            {
+                <div class="col">
+                    <div class="card h-100 shadow-sm product-card" onclick="window.location.href='/Product/Display?Id=@product.Id'">
+                        <style>
+                            .card-img-top {
+                                width: 100%;
+                                height: 250px; /* Định chiều cao cố định */
+                                object-fit: cover; /* Giúp ảnh không bị méo và cắt cho vừa khung */
+                                border-radius: 8px; /* Bo góc ảnh nhẹ */
+                                background-color: #f8f9fa; /* Màu nền nếu ảnh không load */
+                            }
+                        </style>
+
+                        <img src="@product.ImageUrl" class="card-img-top" alt="@product.Name">
+
+                        <div class="card-body text-center">
+                            <h5 class="card-title">@product.Name</h5>
+                            <p class="text-danger fw-bold">@product.Price.ToString("N0") VNĐ</p>
+                        </div>
+                    </div>
+                </div>
+     
+            }
+        </div>
+    }
+    else
+    {
+        <div class="alert alert-warning text-center">Không có sản phẩm nào!</div>
+    }
+
+</div>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const params = new URLSearchParams(window.location.search);
+        const detail = params.get("detail");
+        const buttons = document.querySelectorAll(".btn-sm");
+
+        buttons.forEach(btn => {
+            const btnText = btn.textContent.trim();
+
+            const isAll = !detail && btnText === "Tất cả";
+            const isSelected = btnText === detail;
+
+            if (isAll || isSelected) {
+                btn.classList.remove("btn-outline-primary");
+                btn.classList.add("btn-primary");
+            } else {
+                btn.classList.remove("btn-primary");
+                btn.classList.add("btn-outline-primary");
+            }
+        });
+    });
+</script>

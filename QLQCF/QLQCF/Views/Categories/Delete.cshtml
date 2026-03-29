@@ -1,0 +1,24 @@
+﻿@* Views/Categories/Delete.cshtml *@
+@model QLQCF.Models.Category
+
+<div class="container mt-4">
+    <h2 class="text-center text-danger mb-4"><i class="fas fa-exclamation-triangle"></i> Xóa Danh Mục</h2>
+
+    <div class="alert alert-danger shadow p-4 text-center">
+        <h4 class="mb-4">
+            ❗ Bạn có chắc chắn muốn xóa danh mục "<strong>@Model.Name</strong>" không?
+        </h4>
+
+        <form asp-action="DeleteConfirmed" method="post" class="d-inline-block">
+            <button type="submit" class="btn btn-danger me-2">
+                <i class="fas fa-trash-alt"></i> Xóa
+            </button>
+            <a asp-action="Index" class="btn btn-secondary">
+                <i class="fas fa-times"></i> Hủy
+            </a>
+        </form>
+    </div>
+</div>
+
+@* Thêm link Font Awesome để có icon đẹp *@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">

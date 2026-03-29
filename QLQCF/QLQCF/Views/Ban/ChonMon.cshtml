@@ -1,0 +1,119 @@
+﻿@model IEnumerable<QLQCF.Models.Product>
+@{
+    int banId = ViewBag.BanId ?? 0;
+}
+<input type="hidden" id="banId" value="@ViewBag.BanId" />
+
+<h2 class="text-center mb-4">🛒 Chọn món cho bàn @banId</h2>
+
+<div class="row row-cols-1 row-cols-md-3 g-4">
+    @foreach (var product in Model)
+    {
+        <div class="col">
+            <div class="card h-100 shadow-sm">
+                <div class="image-container">
+                    <img src="@product.ImageUrl" class="card-img-top product-img" alt="@product.Name" />
+                </div>
+
+                <div class="card-body text-center">
+                    <h5 class="card-title">@product.Name</h5>
+                    <p class="text-danger fw-bold">@product.Price.ToString("N0") VNĐ</p>
+
+                    <button type="button" class="btn btn-lg btn-danger add-to-cart mt-3" data-product-id="@product.Id">
+                        <i class="fas fa-shopping-cart"></i> Thêm vào giỏ hàng
+                    </button>
+                </div>
+            </div>
+        </div>
+    }
+</div>
+
+<style>
+    .image-container {
+        width: 100%;
+        height: 200px;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #f8f9fa;
+    }
+
+    .product-img {
+        max-height: 100%;
+        max-width: 100%;
+        object-fit: contain;
+    }
+</style>
+
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const banId = parseInt('@banId') || 0;
+
+        // Gán sự kiện cho tất cả nút "Thêm vào giỏ hàng"
+        document.querySelectorAll('.add-to-cart').forEach(button => {
+            button.addEventListener('click', function () {
+                const productId = parseInt(this.getAttribute('data-product-id'));
+                addToCart(productId, 1); // Bạn có thể thay đổi số lượng ở đây nếu cần
+            });
+        });
+
+        function addToCart(productId, quantity) {
+            const banId = document.getElementById("banId").value;
+
+            fetch('/ShoppingCart/AddToCart', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'RequestVerificationToken': document.querySelector('input[name="__RequestVerificationToken"]')?.value || ''
+                },
+                body: JSON.stringify({
+                    productId: productId,
+                    quantity: quantity,
+                    banId: parseInt(banId) // đảm bảo là số
+                })
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    Swal.fire({
+                        icon: 'success',
+                        title: 'Thành công!',
+                        text: data.message,
+                        timer: 1500,
+                        showConfirmButton: false
+                    });
+                    loadCartSummary();
+                } else {
+                    Swal.fire({
+                        icon: 'error',
+                        title: 'Lỗi!',
+                        text: data.message
+                    });
+                }
+            })
+            .catch(error => {
+                console.error('Lỗi khi thêm vào giỏ:', error);
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Lỗi!',
+                    text: 'Không thể thêm vào giỏ hàng.'
+                });
+            });
+        }
+
+        
+
+        function loadCartSummary() {
+            fetch('/ShoppingCart/GetCartSummary')
+                .then(res => res.json())
+                .then(data => {
+                    document.getElementById("cart-count").innerText = data.CartItemCount;
+                    document.getElementById("cart-total").innerText = data.TotalPrice.toLocaleString() + " VNĐ";
+                });
+        }
+    });
+</script>
+

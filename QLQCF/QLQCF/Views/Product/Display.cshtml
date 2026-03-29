@@ -1,0 +1,129 @@
+﻿@model QLQCF.Models.Product
+
+<div class="container mt-4">
+    <!-- Nút Quay Lại -->
+    <button class="btn btn-outline-secondary mb-3" onclick="goBack()">
+        <i class="bi bi-arrow-left">Thoát</i>
+    </button>
+
+    <div class="row">
+  
+
+        <div class="col-md-5 text-center">
+            <div class="image-container">
+                <img src="@Model.ImageUrl" class="img-fluid" alt="@Model.Name">
+            </div>
+        </div>
+
+
+        <!-- Thông tin sản phẩm -->
+        <div class="col-md-7">
+            <h2>@Model.Name</h2>
+            <p>@Model.Description</p>
+            <h4 class="text-danger fw-bold">@Model.Price.ToString("N0") VNĐ</h4>
+
+            <!-- Chọn số lượng -->
+            <div class="d-flex align-items-center gap-2">
+                <label for="productQuantity" class="me-2 fw-bold">Số Lượng</label>
+                <div class="input-group quantity-group">
+                    <button class="btn btn-outline-secondary minus" type="button">-</button>
+                    <input type="number" id="productQuantity" class="form-control text-center quantity-input" value="1" min="1">
+                    <button class="btn btn-outline-secondary plus" type="button">+</button>
+                </div>
+            </div>
+
+            <!-- Nút thêm vào giỏ hàng -->
+            <button class="btn btn-lg btn-danger add-to-cart mt-3" data-product-id="@Model.Id">
+                <i class="fas fa-shopping-cart"></i> Thêm vào giỏ hàng
+            </button>
+
+
+            <!-- Thông báo khi thêm vào giỏ hàng -->
+            <div id="cart-message" class="alert alert-success text-center mt-3" style="display: none;"></div>
+        </div>
+    </div>
+
+</div>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+    function goBack() {
+        window.history.back();
+        window.location.href = "/";
+    }
+
+    document.addEventListener("DOMContentLoaded", () => {
+        const quantityInput = document.getElementById("productQuantity");
+
+        // Tăng giảm số lượng
+        document.querySelector(".minus")?.addEventListener("click", () => {
+            let currentValue = parseInt(quantityInput.value) || 1;
+            if (currentValue > 1) {
+                quantityInput.value = currentValue - 1;
+            }
+        });
+
+        document.querySelector(".plus")?.addEventListener("click", () => {
+            let currentValue = parseInt(quantityInput.value) || 0;
+            quantityInput.value = currentValue + 1;
+        });
+
+        // Sự kiện thêm vào giỏ hàng
+        document.querySelectorAll(".add-to-cart").forEach(button => {
+            button.addEventListener("click", () => {
+                const productId = parseInt(button.dataset.productId);
+                const quantity = parseInt(quantityInput?.value || "1");
+
+                addToCart(productId, quantity);
+            });
+        });
+
+        function addToCart(productId, quantity) {
+            fetch("/ShoppingCart/AddToCart", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                    "RequestVerificationToken": document.querySelector('input[name="__RequestVerificationToken"]')?.value || ""
+                },
+                body: JSON.stringify({ productId, quantity })
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    Swal.fire({
+                        icon: "success",
+                        title: "Thành công!",
+                        text: data.message,
+                        timer: 1500,
+                        showConfirmButton: false
+                    }).then(() => {
+                        location.reload(); // Làm mới trang sau khi Swal đóng
+                    });
+
+                    const cartCount = document.getElementById("cart-item-count");
+                    if (cartCount) {
+                        cartCount.textContent = data.cartItemCount;
+                    }
+
+                    if (typeof loadCartSummary === "function") {
+                        loadCartSummary();
+                    }
+                } else {
+                    Swal.fire({
+                        icon: "error",
+                        title: "Lỗi!",
+                        text: data.message
+                    });
+                }
+            })
+            .catch(error => {
+                console.error("Lỗi khi gửi request:", error);
+                Swal.fire({
+                    icon: "error",
+                    title: "Lỗi!",
+                    text: "Không thể thêm vào giỏ hàng."
+                });
+            });
+        }
+    });
+</script>
